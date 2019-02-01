@@ -3,7 +3,7 @@
 *January 22, 2019*
 
 **Intro**  
-Growing up in the 1990s and 2000s, I have been a firsthand participant in an explosion of consumer computer technology. The technology and the industry has always been a source of wonder and excitement for me. As a video gamer, I have had my eye on the cutting edge of technological power for years, even if I haven not had the means to use it myself. That is why after long consideration, I have decided to pursue building a simple video game of checkers for my term project. With this, I know that I will have to work hard developing my knowledge, understanding, and technical skill with programming.
+Growing up in the 1990s and 2000s, I have been a firsthand participant in an explosion of consumer computer technology. The technology and the industry has always been a source of wonder and excitement for me. As a video gamer, I have had my eye on the cutting edge of technological power for years, even if I have not had the means to use it myself. That is why after long consideration, I have decided to pursue building a simple video game of checkers for my term project. With this, I know that I will have to work hard developing my knowledge, understanding, and technical skill with programming.
 
 **Database**  
 It is now common sense to me that every application of programming requires some form of database. For my game, I am going to need to store location data of the pieces on the board. I will also need to store the data indicating which player owns the pieces and if a piece has been "kinged" or "crowned" or not. I would also like to store player data such as player name and a win/lose ratio.

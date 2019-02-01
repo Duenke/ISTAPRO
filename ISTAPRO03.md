@@ -18,9 +18,7 @@
 **Players**  
 * PlayerID  
 * PlayerName  
-* Wins  
-* Loses  
-* GamesPlayed
+* PieceColor
 
 **Pieces**  
 * PieceID  
@@ -29,8 +27,7 @@
 * PieceColor
 
 **Records**  
-* PlayerID  
-* PlayerName  
+* PlayerID   
 * Wins  
 * Loses  
 * GamesPlayed
