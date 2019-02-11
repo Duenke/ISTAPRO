@@ -12,8 +12,8 @@
 * SquareID  
 * Column  
 * Row  
-* Location  
-* SquareColor
+* SquareColor  
+* PieceID
 
 **Players**  
 * PlayerID  
@@ -23,7 +23,8 @@
 **Pieces**  
 * PieceID  
 * KingStatus  
-* Location  
+* Column  
+* Row  
 * PieceColor
 
 **Records**  
