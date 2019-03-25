@@ -11,18 +11,18 @@ A use case is a written description of how users will perform tasks on your webs
 * System
 * Technician
 
-**Triggers:**
+**Triggers:**  
 * The user encounters an issue while performing daily operations.
 
-**Preconditions:**
+**Preconditions:**  
 * The user regularly uses a product supplied by the company.
 
-**Post-conditions**
+**Post-conditions**  
 * The technician will have resolved the issue.
 * The help ticket will be archieved in the system.
 * The user will resume normal operations.
 
-**Normal Flow**
+**Normal Flow**  
 1. The user will navigate to the online help ticket submission page.
 1. The system will present black boxes for "Name, Email Address, Platform, and Issue Encountered".
 1. The user will fill in the required boxes.
@@ -38,7 +38,7 @@ A use case is a written description of how users will perform tasks on your webs
 1. The system will move the ticket to the ClosedTickets database.
 1. The user will resume noraml operations until another issue arrises.
 
-**Alternate Flows**
+**Alternate Flows**  
 9A1. The user did not include enough relevant information for the technician to diagnose the issue.
 1. The technician will contact the user via email, requesting more relevant information.
 1. The technician may call the user via telephone if necessary.
