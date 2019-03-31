@@ -19,7 +19,7 @@ A use case is a written description of how users will perform tasks on your webs
 
 **Post-conditions**  
 * The technician will have resolved the issue.
-* The help ticket will be archieved in the system.
+* The help ticket will be archived in the system.
 * The user will resume normal operations.
 
 **Normal Flow**  
@@ -30,13 +30,13 @@ A use case is a written description of how users will perform tasks on your webs
 1. The system will generate a UserID, TicketNumber, and Submission TimeStamp for the submission.
 1. The system will populate the NewTickets database with the new ticket.
 1. The technician will open the ticket and review the issue.
-1. The system will move the ticket to the OpenTickets database and generate an Openning TimeStamp.
+1. The system will move the ticket to the OpenTickets database and generate an Opening TimeStamp.
 1. The technician will diagnose the issue.
 1. The technician will resolve the issue and add notes to the ticket.
 1. The technician will click the "Resolved" button when ready.
 1. The system will notify the user of the resolution with the technician's notes.
 1. The system will move the ticket to the ClosedTickets database.
-1. The user will resume noraml operations until another issue arrises.
+1. The user will resume normal operations until another issue arises.
 
 **Alternate Flows**  
 9A1. The user did not include enough relevant information for the technician to diagnose the issue.
@@ -45,7 +45,7 @@ A use case is a written description of how users will perform tasks on your webs
 1. The use case continues.
 
 9A2. The problem cannot be diagnosed remotely and the technician requires user input to resolve the issue.
-1. The technician contacts the user via email, requesting telephone confrencing.
+1. The technician contacts the user via email, requesting telephone conferencing.
 1. The user calls the technician.
 1. The technician guides the user step by step, gathering information over the phone about the issue.
 1. The use case continues.
