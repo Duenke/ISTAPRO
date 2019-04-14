@@ -1,0 +1,57 @@
+﻿@model ISTAPRO12.Models.Ticket
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Submit A Ticket</title>
+    <link href="~/css/submit.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="pageInfo">
+            <ul>
+                <li>Submit A New Ticket</li>
+                <li>@DateTime.Now</li>
+            </ul>
+        </div>
+
+        <form asp-action="SubmitTicket" method="post">
+            <div class="userInfo">
+                <span>
+                    <label asp-for="CustName">Customer Name:</label>
+                    <input asp-for="CustName" class="form-control" placeholder="Enter full name here." />
+                </span>
+                <span>
+                    <label asp-for="CustEmail">Customer Email:</label>
+                    <input asp-for="CustEmail" class="form-control" placeholder="Enter email address here." />
+                </span>
+            </div>
+
+            <div class="summaryInfo">
+                <span>
+                    <label asp-for="Platform">Platform:</label>
+                    <input asp-for="Platform" class="form-control" placeholder="Enter platform here." />
+                </span>
+                <span>
+                    <label asp-for="Summary">Summary:</label>
+                    <input asp-for="Summary" class="form-control" placeholder="Enter brief summary here." />
+                </span>
+            </div>
+
+            <div class="issueInfo">
+                <label asp-for="Issue">Issue:</label>
+                <input asp-for="Issue" class="form-control" placeholder="Enter details of the issue here." />
+            </div>
+
+            <div class="dateInfo">
+                <input asp-for="SubmitDate" type="hidden" />
+            </div>
+
+            <a asp-action="HasBeenSubmitted" class="btn">
+                Submit
+            </a>
+        </form>
+    </div>
+</body>
+</html>
