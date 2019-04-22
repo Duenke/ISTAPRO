@@ -1,0 +1,44 @@
+﻿@model ISTAPRO12.Models.Ticket
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Submit A Ticket</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="list-inline">
+            <ul style="list-style: none">
+                <li><h1>Submit A New Ticket</h1></li>
+                <li><h1>@DateTime.Now</h1></li>
+            </ul>
+        </div>
+
+        <form asp-action="SubmitTicket" method="post">
+            <label asp-for="CustName">Customer Name:</label>
+            <input asp-for="CustName" class="form-control" placeholder="Enter full name here." />
+
+            <label asp-for="CustEmail">Customer Email:</label>
+            <input asp-for="CustEmail" class="form-control" placeholder="Enter email address here." />
+
+            <label asp-for="Platform">Platform:</label>
+            <input asp-for="Platform" class="form-control" placeholder="Enter platform here." />
+
+            <label asp-for="Summary">Summary:</label>
+            <input asp-for="Summary" class="form-control" placeholder="Enter brief summary here." />
+
+            <label asp-for="Issue">Issue:</label>
+            <textarea asp-for="Issue" class="form-control" placeholder="Enter details of the issue here."></textarea>
+
+            <input asp-for="SubmitDate" type="hidden" value="@DateTime.Now" />
+
+            <button type="submit" class="btn btn-primary">
+                Submit
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
