@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ISTAPRO12.Models.Ticket>
+@{
+    ViewBag.Title = "New Tickets View";
+    Layout = "_Layout";
+}
+
+<div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr><td>TicketNumber</td><td>SubmitDate</td><td>Summary</td><td>Details</td></tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model)
+            {
+                <tr>
+                    <td>@t.TicketNum</td>
+                    <td>@t.SubmitDate</td>
+                    <td>@t.Summary</td>
+                    <td><a asp-action="ViewTicket" asp-route-TicketNum="@t.TicketNum" class="btn btn-warning">View</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Home</a>
+</div>

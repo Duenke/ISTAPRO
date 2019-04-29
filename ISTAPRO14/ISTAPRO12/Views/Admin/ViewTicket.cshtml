@@ -1,0 +1,25 @@
+﻿@model ISTAPRO12.Models.Ticket
+@{
+    ViewBag.Title = "Ticket Details";
+    Layout = "_Layout";
+}
+
+<div>
+    <table class="table table-striped table-bordered">
+        <tr><td>TicketNum: @Model.TicketNum</td></tr>
+        <tr><td>SubmitDate: @Model.SubmitDate</td></tr>
+        <tr><td>OpenDate: @Model.OpenDate</td></tr>
+        <tr><td>CloseDate: @Model.CloseDate</td></tr>
+        <tr><td>EmpID: @Model.EmpID</td></tr>
+        <tr><td>CustID: @Model.CustID</td></tr>
+        <tr><td>CustName: @Model.CustName</td></tr>
+        <tr><td>CustEmail: @Model.CustEmail</td></tr>
+        <tr><td>Platform: @Model.Platform</td></tr>
+        <tr><td>Summary: @Model.Summary</td></tr>
+        <tr><td>Issue: @Model.Issue</td></tr>
+        <tr><td>Resolution: @Model.Resolution</td></tr>
+    </table>
+    <a asp-action="PullTicket" class="btn btn-primary">Pull Ticket</a>
+    <a asp-action="NewTickets" class="btn btn-outline-primary">Back</a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Home</a>
+</div>
