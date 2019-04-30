@@ -1,0 +1,43 @@
+﻿@model ISTAPRO12.Models.Ticket
+@{
+    ViewBag.Title = "Submit A Ticket";
+    Layout = "_Layout";
+}
+
+<div>
+    <div class="list-inline">
+        <ul style="list-style: none">
+            <li><h1>Submit A New Ticket</h1></li>
+            <li><h1>@DateTime.Now</h1></li>
+        </ul>
+    </div>
+
+    <form asp-action="SubmitTicket" method="post">
+        <label asp-for="CustName">Customer Name:</label>
+        <div><span asp-validation-for="CustName" class="text-danger"></span></div>
+        <input asp-for="CustName" class="form-control" placeholder="Enter full name here." />
+
+        <label asp-for="CustEmail">Customer Email:</label>
+        <div><span asp-validation-for="CustEmail" class="text-danger"></span></div>
+        <input asp-for="CustEmail" class="form-control" placeholder="Enter email address here." />
+
+        <label asp-for="Platform">Platform:</label>
+        <div><span asp-validation-for="Platform" class="text-danger"></span></div>
+        <input asp-for="Platform" class="form-control" placeholder="Enter platform here." />
+
+        <label asp-for="Summary">Summary:</label>
+        <div><span asp-validation-for="Summary" class="text-danger"></span></div>
+        <input asp-for="Summary" class="form-control" placeholder="Enter brief summary here." />
+
+        <label asp-for="Issue">Issue:</label>
+        <div><span asp-validation-for="Issue" class="text-danger"></span></div>
+        <textarea asp-for="Issue" class="form-control" placeholder="Enter details of the issue here."></textarea>
+
+        <input asp-for="SubmitDate" type="hidden" value="@DateTime.Now" />
+
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
