@@ -27,11 +27,14 @@ namespace ISTAPRO12.Models
                 if (dbEntry != null)
                 {
                     dbEntry.SubmitDate = ticket.SubmitDate;
+                    dbEntry.OpenDate = ticket.OpenDate;
+                    dbEntry.CloseDate = ticket.CloseDate;
                     dbEntry.CustName = ticket.CustName;
                     dbEntry.CustEmail = ticket.CustEmail;
                     dbEntry.Platform = ticket.Platform;
                     dbEntry.Summary = ticket.Summary;
                     dbEntry.Issue = ticket.Issue;
+                    dbEntry.Resolution = ticket.Resolution;
                 }
             }
             context.SaveChanges();

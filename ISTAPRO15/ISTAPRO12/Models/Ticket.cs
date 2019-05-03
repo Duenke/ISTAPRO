@@ -15,7 +15,6 @@ namespace ISTAPRO12.Models
         public string OpenDate { get; set; }
         public string CloseDate { get; set; }
         public int EmpID { get; set; }
-        public int CustID { get; set; }
         [Required(ErrorMessage = "Please enter a full name")]
         public string CustName { get; set; }
         [Required(ErrorMessage = "Please enter an email address")]

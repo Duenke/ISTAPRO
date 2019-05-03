@@ -1,6 +1,6 @@
 ﻿@model ISTAPRO12.Models.Ticket
 @{
-    ViewBag.Title = "Ticket Details";
+    ViewBag.Title = "Pull Ticket";
     Layout = "_Layout";
 }
 
@@ -16,9 +16,13 @@
         <tr><td>Platform: @Model.Platform</td></tr>
         <tr><td>Summary: @Model.Summary</td></tr>
         <tr><td>Issue: @Model.Issue</td></tr>
-        <tr><td>Resolution: @Model.Resolution</td></tr>
+        <tr>
+            <td>
+                Resolution: <br />
+                <textarea asp-for="Resolution" class="form-control">@Model.Resolution</textarea>
+            </td>
+        </tr>
     </table>
-    <a asp-action="PullTicket" asp-route-TicketID="@Model.TicketID" class="btn btn-primary">Pull Ticket</a>
-    <a asp-action="NewTickets" class="btn btn-secondary">Back</a>
-    <a asp-action="DeleteTicket" asp-route-TicketID="@Model.TicketID" class="btn btn-danger">Delete Ticket</a>
+    <a asp-action="SaveTicket" asp-route-TicketID="@Model.TicketID" asp-route-OpenDate="@Model.OpenDate" asp-route-Resolution="@Model.Resolution" class="btn btn-primary">Save Ticket</a>
+    <a asp-action="CloseTicket" asp-route-TicketID="@Model.TicketID" class="btn btn-danger">Close Out Ticket</a>
 </div>

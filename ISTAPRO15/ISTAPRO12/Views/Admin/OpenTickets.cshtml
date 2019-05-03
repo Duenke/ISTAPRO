@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ISTAPRO12.Models.Ticket>
 @{
-    ViewBag.Title = "New Tickets View";
+    ViewBag.Title = "Open Tickets View";
     Layout = "_Layout";
 }
 
@@ -22,6 +22,6 @@
         </tbody>
     </table>
     <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Home</a>
-    <a asp-action="OpenTickets" class="btn btn-outline-primary">Open Tickets</a>
+    <a asp-action="NewTickets" class="btn btn-outline-primary">New Tickets</a>
     <a asp-action="ClosedTickets" class="btn btn-outline-primary">Closed Tickets</a>
 </div>
