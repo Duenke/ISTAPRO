@@ -5,11 +5,8 @@
 }
 
 <div>
-    <div class="list-inline">
-        <ul style="list-style: none">
-            <li><h1>Submit A New Ticket</h1></li>
-            <li><h1>@DateTime.Now</h1></li>
-        </ul>
+    <div class="navbar-nav">
+        <h1>Submit A Ticket @DateTime.Now</h1>
     </div>
 
     <form asp-action="SubmitTicket" method="post">
@@ -34,6 +31,8 @@
         <textarea asp-for="Issue" class="form-control" placeholder="Enter details of the issue here."></textarea>
 
         <input asp-for="SubmitDate" type="hidden" value="@DateTime.Now" />
+
+        <br />
 
         <button type="submit" class="btn btn-primary">
             Submit

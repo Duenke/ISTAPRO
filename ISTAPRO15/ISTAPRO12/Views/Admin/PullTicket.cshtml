@@ -5,24 +5,31 @@
 }
 
 <div>
-    <table class="table table-striped table-bordered">
-        <tr><td>TicketNum: @Model.TicketID</td></tr>
-        <tr><td>SubmitDate: @Model.SubmitDate</td></tr>
-        <tr><td>OpenDate: @Model.OpenDate</td></tr>
-        <tr><td>CloseDate: @Model.CloseDate</td></tr>
-        <tr><td>EmpID: @Model.EmpID</td></tr>
-        <tr><td>CustName: @Model.CustName</td></tr>
-        <tr><td>CustEmail: @Model.CustEmail</td></tr>
-        <tr><td>Platform: @Model.Platform</td></tr>
-        <tr><td>Summary: @Model.Summary</td></tr>
-        <tr><td>Issue: @Model.Issue</td></tr>
-        <tr>
-            <td>
-                Resolution: <br />
-                <textarea asp-for="Resolution" class="form-control">@Model.Resolution</textarea>
-            </td>
-        </tr>
-    </table>
-    <a asp-action="SaveTicket" asp-route-TicketID="@Model.TicketID" asp-route-OpenDate="@Model.OpenDate" asp-route-Resolution="@Model.Resolution" class="btn btn-primary">Save Ticket</a>
-    <a asp-action="CloseTicket" asp-route-TicketID="@Model.TicketID" class="btn btn-danger">Close Out Ticket</a>
+    <div class="navbar-nav">
+        <h1>Pull Ticket @DateTime.Now</h1>
+    </div>
+
+    <form asp-action="SaveTicket" asp-route-TicketID="@Model.TicketID" asp-route-OpenDate="@Model.OpenDate" method="post">
+        <table class="table table-striped table-bordered">
+            <tr><td>TicketNum: @Model.TicketID</td></tr>
+            <tr><td>SubmitDate: @Model.SubmitDate</td></tr>
+            <tr><td>OpenDate: @Model.OpenDate</td></tr>
+            <tr><td>CloseDate: @Model.CloseDate</td></tr>
+            <tr><td>EmpID: @Model.EmpID</td></tr>
+            <tr><td>CustName: @Model.CustName</td></tr>
+            <tr><td>CustEmail: @Model.CustEmail</td></tr>
+            <tr><td>Platform: @Model.Platform</td></tr>
+            <tr><td>Summary: @Model.Summary</td></tr>
+            <tr><td>Issue: @Model.Issue</td></tr>
+            <tr>
+                <td>
+                    Resolution: <br />
+                    <textarea asp-for="Resolution" class="form-control">@Model.Resolution</textarea>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-primary">
+            Save Ticket
+        </button>
+    </form>
 </div>

@@ -21,7 +21,11 @@ namespace ISTAPRO12.Controllers
 
         public IActionResult ClosedTickets() => View(controllerRepo.Tickets.Where(t => t.CloseDate != null).OrderBy(t => t.TicketID));
 
-        public IActionResult ViewTicket(int ticketID) => View(controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID));
+        public IActionResult ViewNewTicket(int ticketID) => View(controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID));
+
+        public IActionResult ViewOpenTicket(int ticketID) => View(controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID));
+
+        public IActionResult ViewClosedTicket(int ticketID) => View(controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID));
 
         public IActionResult PullTicket(int ticketID)
         {
@@ -33,6 +37,7 @@ namespace ISTAPRO12.Controllers
             return View(ticket);
         }
 
+        [HttpPost]
         public IActionResult SaveTicket(int ticketID, string openDate, string resolution)
         {
             Ticket ticket = controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID);
@@ -40,6 +45,14 @@ namespace ISTAPRO12.Controllers
             ticket.Resolution = resolution;
             controllerRepo.AddNewTicket(ticket);
             return RedirectToAction("OpenTickets");
+        }
+
+        public IActionResult CloseTicket(int ticketID)
+        {
+            Ticket ticket = controllerRepo.Tickets.FirstOrDefault(t => t.TicketID == ticketID);
+            ticket.CloseDate = DateTime.Now.ToString();
+            controllerRepo.AddNewTicket(ticket);
+            return RedirectToAction("ClosedTickets");
         }
 
         public IActionResult DeleteTicket(int ticketID)
