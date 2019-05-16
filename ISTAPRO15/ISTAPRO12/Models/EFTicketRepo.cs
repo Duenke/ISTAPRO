@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace ISTAPRO12.Models
 {
     public class EFTicketRepo : ITicketRepo
     {
         // Copied template from the book...struggling with this EF stuff.
-        private ApplicationDbContext context;
+        private readonly ApplicationDbContext context;
 
         public EFTicketRepo(ApplicationDbContext ctx) => context = ctx;
 
